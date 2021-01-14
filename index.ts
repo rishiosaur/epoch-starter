@@ -1,9 +1,10 @@
 import { Epoch } from '@banur/epoch'
-import { ConnectionOptions } from 'typeorm'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
+
 
 // Instantiates a new 
-const server = new Epoch({
-	url: process.env.url,
-} as ConnectionOptions)
+const server = new Epoch(process.env.url ?? "")
 
 server.start(5000)

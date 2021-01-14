@@ -3,7 +3,6 @@ import { ConnectionOptions } from 'typeorm'
 
 // Instantiates a new 
 const server = new Epoch({
-	type: process.env.type,
 	url: process.env.url,
 } as ConnectionOptions)
 
